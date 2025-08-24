@@ -3,9 +3,9 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
  
-    await queryInterface.removeColumn('viajes', 'chofer');
+    await queryInterface.removeColumn('Viajes', 'chofer');
 
-    await queryInterface.addColumn('viajes', 'usuarioEmpresa_id', {
+    await queryInterface.addColumn('Viajes', 'usuarioEmpresa_id', {
       type: Sequelize.INTEGER,
       allowNull: false,
       references: {
@@ -19,10 +19,10 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
 
-    await queryInterface.removeColumn('viajes', 'usuarioEmpresa_id');
+    await queryInterface.removeColumn('Viajes', 'usuarioEmpresa_id');
 
 
-    await queryInterface.addColumn('viajes', 'chofer', {
+    await queryInterface.addColumn('Viajes', 'chofer', {
       type: Sequelize.STRING,
       allowNull: true 
     });

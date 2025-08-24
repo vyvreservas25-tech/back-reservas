@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
    
-    await queryInterface.changeColumn('viajes', 'usuarioEmpresa_id', {
+    await queryInterface.changeColumn('Viajes', 'usuarioEmpresa_id', {
       type: Sequelize.INTEGER,
       allowNull: false,
       after: 'precio' 
@@ -12,7 +12,7 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
   
-    await queryInterface.changeColumn('viajes', 'usuarioEmpresa_id', {
+    await queryInterface.changeColumn('Viajes', 'usuarioEmpresa_id', {
       type: Sequelize.INTEGER,
       allowNull: false,
       after: 'medioTransporte_id' 

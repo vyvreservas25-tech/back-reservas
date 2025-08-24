@@ -3,14 +3,14 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     //  Agregar columna 'recuperacionToken'
-    await queryInterface.addColumn('usuarios', 'recuperacionToken', {
+    await queryInterface.addColumn('Usuarios', 'recuperacionToken', {
       type: Sequelize.STRING,
       allowNull: true,
       after: 'fechaVerificacion' 
     });
 
     //  Agregar columna 'recuperacionTokenExpira'
-    await queryInterface.addColumn('usuarios', 'recuperacionTokenExpira', {
+    await queryInterface.addColumn('Usuarios', 'recuperacionTokenExpira', {
       type: Sequelize.DATE,
       allowNull: true,
       after: 'recuperacionToken'
@@ -19,7 +19,7 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     // Eliminar campos si se hace rollback
-    await queryInterface.removeColumn('usuarios', 'recuperacionTokenExpira');
-    await queryInterface.removeColumn('usuarios', 'recuperacionToken');
+    await queryInterface.removeColumn('Usuarios', 'recuperacionTokenExpira');
+    await queryInterface.removeColumn('Usuarios', 'recuperacionToken');
   }
 };

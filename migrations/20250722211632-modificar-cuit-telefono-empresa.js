@@ -6,13 +6,13 @@ module.exports = {
     await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 0;');
 
     // Cambiar columnas
-    await queryInterface.changeColumn('empresa', 'telefono', {
+    await queryInterface.changeColumn('Empresa', 'telefono', {
       type: Sequelize.STRING,
       allowNull: false,
       unique: true,
     });
 
-    await queryInterface.changeColumn('empresa', 'cuit', {
+    await queryInterface.changeColumn('Empresa', 'cuit', {
       type: Sequelize.STRING,
       allowNull: false,
       unique: true,
@@ -25,13 +25,13 @@ module.exports = {
   down: async (queryInterface, Sequelize) => {
     await queryInterface.sequelize.query('SET FOREIGN_KEY_CHECKS = 0;');
 
-    await queryInterface.changeColumn('empresa', 'telefono', {
+    await queryInterface.changeColumn('Empresa', 'telefono', {
       type: Sequelize.INTEGER,
       allowNull: false,
       unique: true,
     });
 
-    await queryInterface.changeColumn('empresa', 'cuit', {
+    await queryInterface.changeColumn('Empresa', 'cuit', {
       type: Sequelize.INTEGER,
       allowNull: false,
       unique: true,

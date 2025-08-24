@@ -3,17 +3,17 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     // Eliminar las columnas 'ubicacionOrigen' y 'ubicacionDestino'
-    await queryInterface.removeColumn('reservas', 'ubicacionOrigen');
-    await queryInterface.removeColumn('reservas', 'ubicacionDestino');
+    await queryInterface.removeColumn('Reservas', 'ubicacionOrigen');
+    await queryInterface.removeColumn('Reservas', 'ubicacionDestino');
   },
 
   down: async (queryInterface, Sequelize) => {
    
-    await queryInterface.addColumn('reservas', 'ubicacionOrigen', {
+    await queryInterface.addColumn('Reservas', 'ubicacionOrigen', {
       type: Sequelize.STRING,
       allowNull: true, 
     });
-    await queryInterface.addColumn('reservas', 'ubicacionDestino', {
+    await queryInterface.addColumn('Reservas', 'ubicacionDestino', {
       type: Sequelize.STRING,
       allowNull: true, 
     });
